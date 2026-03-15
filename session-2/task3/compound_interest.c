@@ -6,6 +6,7 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 
 int main( void ) {
 
@@ -15,11 +16,15 @@ int main( void ) {
     float final_amount;
     float gain;
 
+    final_amount = deposit * pow(1 + rate, term);
+    gain = final_amount - deposit;
+
+    printf("Final amount after %d years: %.2f\n", term, final_amount);
+    printf("Total gained %.2f\n", gain);
     /*
      * Implement the formula for compound interest.
      * Print out the final amount and the gain compared to the initial deposit.
      */
     
-
     return 0;
 }
